@@ -1,6 +1,11 @@
 <?php
 // Get current page
 $currentPage = basename($_SERVER['PHP_SELF'], '.php');
+
+// Get current user if logged in
+if (isLoggedIn()) {
+    $currentUser = getUserById($pdo, getCurrentUserId());
+}
 ?>
 
 <nav class="navbar">
