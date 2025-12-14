@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Task Manager - UI Preview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="logo">
+                    <i class="fas fa-tasks"></i>
+                    <span>PHP Task Manager</span>
+                </a>
+            </div>
+            
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-user">
+                    <div class="user-dropdown">
+                        <button class="user-dropdown-toggle">
+                            <img src="assets/images/default-avatar.svg" alt="Profile" class="user-avatar">
+                            <span class="user-name">Demo User</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card stat-total">
+                <div class="stat-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">10</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-pending">
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Pending</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-progress">
+                <div class="stat-icon">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">In Progress</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-completed">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-overdue">
+                <div class="stat-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">1</div>
+                    <div class="stat-label">Overdue</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-today">
+                <div class="stat-icon">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Due Today</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-rate">
+                <div class="stat-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-value">30%</div>
+                    <div class="stat-label">Completion Rate</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-action">
+                <button class="btn btn-primary btn-add-task">
+                    <i class="fas fa-plus"></i>
+                    <span>Add New Task</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Task Controls -->
+        <div class="task-controls">
+            <div class="view-switcher">
+                <button class="view-btn active" title="List View">
+                    <i class="fas fa-list"></i>
+                </button>
+                <button class="view-btn" title="Grid View">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn" title="Kanban View">
+                    <i class="fas fa-columns"></i>
+                </button>
+            </div>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search tasks..." class="search-input">
+            </div>
+            
+            <button class="btn btn-secondary">
+                <i class="fas fa-filter"></i>
+                Filters
+            </button>
+        </div>
+
+        <!-- Tasks Container -->
+        <div class="tasks-container">
+            <div class="tasks-list">
+                <!-- Sample Task Card 1 -->
+                <div class="task-card due-today">
+                    <div class="task-header">
+                        <div class="task-title-section">
+                            <h3 class="task-title">
+                                <i class="fas fa-star favorite-icon"></i>
+                                Complete project documentation
+                            </h3>
+                            <p class="task-description">Write comprehensive documentation for the PHP Task Manager project including installation guide and user manual</p>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High</span>
+                                <span class="badge status-progress">In Progress</span>
+                                <span class="badge"><i class="fas fa-briefcase"></i> Work</span>
+                                <span class="badge"><i class="fas fa-calendar"></i> Dec 17, 2025</span>
+                                <span class="badge"><i class="fas fa-chart-line"></i> 60%</span>
+                                <span class="badge">documentation</span>
+                                <span class="badge">urgent</span>
+                            </div>
+                        </div>
+                        <div class="task-actions">
+                            <button title="Toggle Status">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <button title="Toggle Favorite">
+                                <i class="fas fa-star favorite-icon"></i>
+                            </button>
+                            <button title="Edit Task">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button title="Duplicate Task">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button title="Delete Task">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Task Card 2 -->
+                <div class="task-card">
+                    <div class="task-header">
+                        <div class="task-title-section">
+                            <h3 class="task-title">Buy groceries</h3>
+                            <p class="task-description">Get vegetables, fruits, milk, bread, and eggs from the supermarket</p>
+                            <div class="task-meta">
+                                <span class="badge priority-low">Low</span>
+                                <span class="badge status-pending">Pending</span>
+                                <span class="badge"><i class="fas fa-shopping-cart"></i> Shopping</span>
+                                <span class="badge"><i class="fas fa-calendar"></i> Dec 14, 2025</span>
+                                <span class="badge">shopping</span>
+                                <span class="badge">personal</span>
+                            </div>
+                        </div>
+                        <div class="task-actions">
+                            <button title="Toggle Status">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <button title="Toggle Favorite">
+                                <i class="fas fa-star"></i>
+                            </button>
+                            <button title="Edit Task">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button title="Duplicate Task">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button title="Delete Task">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Task Card 3 - Completed -->
+                <div class="task-card">
+                    <div class="task-header">
+                        <div class="task-title-section">
+                            <h3 class="task-title completed">Fix login bug</h3>
+                            <p class="task-description">Investigate and fix the session timeout issue reported by users</p>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High</span>
+                                <span class="badge status-completed">Completed</span>
+                                <span class="badge"><i class="fas fa-briefcase"></i> Work</span>
+                                <span class="badge"><i class="fas fa-chart-line"></i> 100%</span>
+                                <span class="badge">bug</span>
+                                <span class="badge">urgent</span>
+                            </div>
+                        </div>
+                        <div class="task-actions">
+                            <button title="Toggle Status">
+                                <i class="fas fa-undo"></i>
+                            </button>
+                            <button title="Toggle Favorite">
+                                <i class="fas fa-star"></i>
+                            </button>
+                            <button title="Edit Task">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button title="Duplicate Task">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button title="Delete Task">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Task Card 4 - Critical -->
+                <div class="task-card overdue">
+                    <div class="task-header">
+                        <div class="task-title-section">
+                            <h3 class="task-title">
+                                <i class="fas fa-star favorite-icon"></i>
+                                Database backup
+                            </h3>
+                            <p class="task-description">Create backup of production database and verify integrity</p>
+                            <div class="task-meta">
+                                <span class="badge priority-critical">Critical</span>
+                                <span class="badge status-pending">Pending</span>
+                                <span class="badge"><i class="fas fa-briefcase"></i> Work</span>
+                                <span class="badge"><i class="fas fa-calendar"></i> Dec 13, 2025</span>
+                                <span class="badge">backup</span>
+                                <span class="badge">database</span>
+                            </div>
+                        </div>
+                        <div class="task-actions">
+                            <button title="Toggle Status">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <button title="Toggle Favorite">
+                                <i class="fas fa-star favorite-icon"></i>
+                            </button>
+                            <button title="Edit Task">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button title="Duplicate Task">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button title="Delete Task">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 PHP Task Manager v1.0.0. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Theme Toggle Button for Demo -->
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 10000;">
+        <button class="btn btn-primary" onclick="toggleTheme()" style="border-radius: 50%; width: 60px; height: 60px; font-size: 1.5rem;">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </div>
+
+    <script>
+        // Theme toggle
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.body.setAttribute('data-theme', newTheme);
+            
+            // Show toast
+            const toast = document.createElement('div');
+            toast.className = 'toast alert-success';
+            toast.innerHTML = `<i class="fas fa-check-circle"></i><span>Switched to ${newTheme} theme</span>`;
+            document.getElementById('toast-container').appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 2000);
+        }
+
+        // Initialize theme
+        document.body.setAttribute('data-theme', 'light');
+    </script>
+</body>
+</html>
