@@ -1,5 +1,6 @@
 # Configuration files (security)
 config/database.php
+!config/database.example.php
 
 # Uploads and user content
 uploads/*

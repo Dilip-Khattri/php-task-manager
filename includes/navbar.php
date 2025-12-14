@@ -46,7 +46,7 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
             <div class="navbar-user">
                 <div class="user-dropdown">
                     <button class="user-dropdown-toggle" id="userDropdownToggle">
-                        <img src="<?php echo isset($currentUser['profile_picture']) ? 'uploads/' . escape($currentUser['profile_picture']) : 'assets/images/default-avatar.png'; ?>" 
+                        <img src="<?php echo isset($currentUser['profile_picture']) ? 'uploads/' . escape($currentUser['profile_picture']) : 'assets/images/default-avatar.svg'; ?>" 
                              alt="Profile" class="user-avatar">
                         <span class="user-name"><?php echo isset($currentUser['username']) ? escape($currentUser['username']) : 'User'; ?></span>
                         <i class="fas fa-chevron-down"></i>

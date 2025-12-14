@@ -122,7 +122,7 @@ include 'includes/navbar.php';
         <div class="profile-card">
             <div class="profile-header">
                 <div class="profile-avatar-large">
-                    <img src="<?php echo isset($currentUser['profile_picture']) ? 'uploads/' . escape($currentUser['profile_picture']) : 'assets/images/default-avatar.png'; ?>" 
+                    <img src="<?php echo isset($currentUser['profile_picture']) ? 'uploads/' . escape($currentUser['profile_picture']) : 'assets/images/default-avatar.svg'; ?>" 
                          alt="Profile Picture" id="profileAvatarPreview">
                     <button class="avatar-upload-btn" onclick="document.getElementById('profilePicture').click()">
                         <i class="fas fa-camera"></i>

@@ -19,7 +19,7 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `profile_picture` varchar(255) DEFAULT 'default-avatar.png',
+  `profile_picture` varchar(255) DEFAULT 'default-avatar.svg',
   `bio` text DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -115,7 +115,7 @@ CREATE TABLE `user_settings` (
 -- --------------------------------------------------------
 
 INSERT INTO `users` (`username`, `email`, `password`, `bio`) VALUES
-('demo', 'demo@taskmanager.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Demo user for PHP Task Manager');
+('demo', 'demo@taskmanager.com', '$2y$10$QW7eIjwIxgkz.YDqRU.K0OP13YjjqhGEHHRGF8ct.1RTJsMa5f8u.', 'Demo user for PHP Task Manager');
 
 -- Get the demo user ID for sample tasks
 SET @demo_user_id = LAST_INSERT_ID();

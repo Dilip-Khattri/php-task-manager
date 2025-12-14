@@ -32,11 +32,23 @@ define('REMEMBER_ME_LIFETIME', 3600 * 24 * 30); // 30 days
 date_default_timezone_set('UTC');
 
 // Error reporting (set to 0 in production)
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+if (defined('ENVIRONMENT') && ENVIRONMENT === 'production') {
+    error_reporting(0);
+    ini_set('display_errors', 0);
+} else {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+}
 
 // Include database configuration
-require_once BASE_PATH . '/config/database.php';
+$dbConfigFile = BASE_PATH . '/config/database.php';
+if (!file_exists($dbConfigFile)) {
+    $dbConfigFile = BASE_PATH . '/config/database.example.php';
+    if (!file_exists($dbConfigFile)) {
+        die('Database configuration file not found. Please copy config/database.example.php to config/database.php and configure your database credentials.');
+    }
+}
+require_once $dbConfigFile;
 
 // Helper function to check if user is logged in
 function isLoggedIn() {
