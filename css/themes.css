@@ -1,0 +1,73 @@
+/* ===================================
+   PHP Task Manager - Theme Styles
+   Version: 1.0.0
+   =================================== */
+
+/* === Dark Theme === */
+[data-theme="dark"] {
+    /* Base Colors */
+    --background: #1a1a2e;
+    --surface: #16213e;
+    --text-primary: #eaeaea;
+    --text-secondary: #a0aec0;
+    --border: #2d3748;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .navbar {
+    background: var(--surface);
+}
+
+[data-theme="dark"] .auth-page {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+[data-theme="dark"] .task-card {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .kanban-column {
+    background: var(--surface);
+}
+
+[data-theme="dark"] .form-control {
+    background: var(--surface);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .modal-content {
+    background: var(--surface);
+}
+
+[data-theme="dark"] .stats-table th {
+    background: var(--background);
+}
+
+[data-theme="dark"] .demo-credentials {
+    background: var(--surface);
+}
+
+[data-theme="dark"] .search-input {
+    background: var(--surface);
+    color: var(--text-primary);
+}
+
+/* === Light Theme (default) === */
+[data-theme="light"] {
+    /* Uses root variables */
+}
+
+/* === Theme Transition === */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar,
+.task-card,
+.stat-card,
+.modal-content,
+.form-control {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
